@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stroke Predicttion</title>
+</head>
+<body>
+<div class = 'login'>
+    <h1>Stroke Risk Indicator</h1>
+
+    <form action = "{{url_for('predict_data_point')}}" method="post">
+
+        <div class = 'mb-3' >
+            <label class = 'form-label'>Gender</label>
+            <select class = 'form-control' name = 'gender' placeholder = "Enter your gender" required>
+                <option class = "placeholder" selected disabled value="">Select Your Gender</option>
+                <option value = "Male">Male</option>
+                <option value = "Female">Female</option>
+            </select>
+        </div>
+        <div class = 'mb-3' >
+            <label class = 'form-label' >Age</label>
+            <input class = 'form-control' type = 'number' name = 'age' placeholder="Enter your Age"
+                min = '0' max = '100'/>
+        </div>
+        <div class = 'mb-3' >
+            <label class = 'form-label' >Hypertension</label>
+            <<select class = 'form-control' name = 'hypertension' placeholder = "Enter yes or no" required>
+                <option class = "placeholder" selected disabled value="">Select Yes or No</option>
+                <option value = 1>Yes</option>
+                <option value = 0>No</option>
+            </select>
+        </div>
+        <div class = 'mb-3' >
+            <label class = 'form-label' >Heart disease</label>
+            <<select class = 'form-control' name = 'heart_disease' placeholder = "Enter yes or no" required>
+                <option class = "placeholder" selected disabled value="">Select Yes or No</option>
+                <option value = 1>Yes</option>
+                <option value = 0>No</option>
+            </select>
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
