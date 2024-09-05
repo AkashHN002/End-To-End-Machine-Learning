@@ -27,7 +27,7 @@ class DataIngestion:
         logging.info('Entered Data Ingestion Component')
         try:
             df = pd.read_csv("D:/Projects/Ml_Projects/notebook/data/healthcare-dataset-stroke-data.csv")
-            df.drop('id',axis = 1)
+            df = df.drop('id',axis = 1)
             logging.info('Read the Dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)

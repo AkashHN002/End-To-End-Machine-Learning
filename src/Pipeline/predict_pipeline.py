@@ -22,6 +22,7 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(self,
+                 id:int,
                  gender:str,
                  age:int,
                  hypertension:int,
@@ -32,6 +33,7 @@ class CustomData:
                  avg_glucose_level:float,
                  bmi:float,
                  smoking_status:str):
+        self.id = id
         self.gender = gender
         self.age = age
         self.hypertension = hypertension
@@ -46,12 +48,14 @@ class CustomData:
     def get_data_as_frame(self):
         try:
             custom_data_input_dict = {
+                'id':[self.id],
                 'gender':[self.gender],
                 'age': [self.age],
                 'hypertension':[self.hypertension],
                 'heart_disease':[self.heart_disease],
                 'ever_married':[self.ever_married],
                 'work_type':[self.work_type],
+                'Residence_type':[self.Residence_type],
                 'avg_glucose_level':[self.avg_glucose_level],
                 'bmi':[self.bmi],
                 'smoking_status':[self.smoking_status],
