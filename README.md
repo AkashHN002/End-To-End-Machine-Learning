@@ -24,7 +24,7 @@ pip install -r requirements.txt
 To run experiments and manage models , execute the script Data_ingestion.py within the `src/` directory:
 
 ```
-python src/Data_ungestion.py
+python src/Components/Data_ingestion.py
 ```
 To run the maodel in localhost, execute the scriptt app.py 
 ```
